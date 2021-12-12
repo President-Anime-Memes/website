@@ -128,7 +128,7 @@
                       hover:bold
                     "
                   >
-                    {{ pollthing.name }} {{ pollthing.gender}}
+                    {{ pollthing.name }}
                   </p>
                 </td>
 
