@@ -1,0 +1,67 @@
+/*Tablet Layout: 768px.*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    table .polltable {
+      font-family: open-sans, sans-serif;
+      border-collapse: collapse;
+      width: 75%;
+      border-radius: 5px;
+    }
+    .stuff {
+    
+      padding: 20px;
+      margin-top: 80px;
+      margin-bottom: 300px;
+      
+   
+     }
+    
+    }
+    
+    
+    /*Mobile Layout: 320px.*/
+    
+    @media only screen and (max-width: 767px) {
+    
+    table .polltable {
+      font-family: open-sans, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      border-radius: 5px;
+    }
+    .stuff {
+    
+      padding: 2px;
+      margin-top: 80px;
+      margin-bottom: 300px;
+      
+   
+     } 
+
+
+    }
+    
+    /*Wide Mobile Layout: 480px.*/
+    
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+    
+    table .polltable {
+      font-family: open-sans, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      border-radius: 5px;
+    }
+    .stuff {
+    
+      padding: 2px;
+      margin-top: 80px;
+      margin-bottom: 300px;
+      
+   
+     }
+
+    
+    }
+    
+    
+    
