@@ -1,30 +1,50 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'website',
+    title: 'President Anime Memes',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      {
+        name: 'og:type',
+        content: 'website',
+      },
+      {
+        name: 'og:image',
+        content: 'https://beta.presidentanimememes.com/banner.webp',
+      },
+      {
+        name: 'og:image_alt',
+        content: 'President Anime Memes Banner',
+      },
+      {
+        name: 'og:title',
+        content: 'Home | President Anime Memes',
+      },
+      {
+        name: 'og:description',
+        content:
+          'An anime community for memes and anime character popularity polls!',
+      },
+      {
+        name: 'og:url',
+        content: 'https://presidentanimememes.com/',
+      },
+      
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    './assets/style.css',
-    './assets/responsive.css'
-  ],
+  css: ['./assets/style.css', './assets/responsive.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -47,6 +67,5 @@ export default {
   axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  }
+  build: {},
 }
