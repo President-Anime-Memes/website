@@ -61,7 +61,31 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/toast'
   ],
+  toast: {
+    position: 'top-center',
+    register: [ // Register custom toasts
+      {
+        name: 'success',
+        message: 'Voting success!',
+        options: {
+          type: 'info',
+          duration: 5000,
+          class: "rounded-xl"
+        }
+      },
+      {
+        name: 'error',
+        message: 'An unknown error occured',
+        options: {
+          type: 'error',
+          duration: 5000,
+          class: "rounded-xl"
+        }
+      }
+    ]
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

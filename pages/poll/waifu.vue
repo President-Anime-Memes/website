@@ -54,7 +54,7 @@
         "
       />
       <div class="p-8">
-        Search: 
+        Search:
         <input
           class="pamgray2 text-white border-red-500"
           type="text"
@@ -70,107 +70,109 @@
             background-color: #e3242b;
           "
         />
-        <form
-          action="https://beta.presidentanimememes.com/poll/annual"
-          method="POST"
-        >
+        <div>
           <input type="hidden" name="type" value="female" />
           <input type="hidden" name="pollcontent" value="dummy" />
 
-          <center>
-            <table class="content-center">
-              <tr
-                v-for="pollthing in poll.filter((x) =>
-                  (x.name.toLowerCase().includes(filter.toLowerCase()) || x.anime.toLowerCase().includes(filter.toLowerCase())) && x.gender.toLowerCase() === 'female' && !x.picture.includes('apple') && !x.anime.toLowerCase().includes('https')
-                )"
-                :key="pollthing.name"
-                class = "h-48"
-              >
-                <td class = "p-2">
-                  <label class="supahpoll">
-                    <input
-                      type="checkbox"
-                      :id="pollthing.name.split(', ').join('_')"
-                      class="pollchoice"
-                      name="pollcontent"
-                      @click="m => checkClick(pollthing, m)"
-                      :value="pollthing.name.split(', ').join('_')"
-                      :disabled="
-                        checks.length >= 10 &&
-                        !checks.includes(pollthing.name.split(', ').join('_'))
-                      "
-                    /><span class="checkmark"></span>
-                  </label>
-                </td>
-                <td class="px-2 py-8 md:px-8">
-                  <div
-                    class="
-                      uppercase
-                      tracking-wide
-                      text-xs
-                      md:text-sm
-                      text-red-500
-                      font-semibold
-                    "
-                  >
-                    {{ pollthing.anime }}
-                  </div>
-                  <p
-                    class="
-                      block
-                      mt-1
-                      text-lg
-                      leading-tight
-                      font-medium
-                      text-sm
-                      md:text-base
-                      text-white
-                      hover:bold
-                    "
-                  >
-                    {{ pollthing.name }}
-                  </p>
-                </td>
-
-                <td>
-                  <img
-                    class="h-48 w-full object-cover w-96 md:w-48"
-                    :src="pollthing.picture"
-                    style="min-width: 100px"
-                    :alt="pollthing.name"
-                  />
-                </td>
-              </tr>
-            </table>
-            <br />
-            <!--                  <div class="g-recaptcha border border-white bg-gray-600 text-white" data-callback = "calvack()"></div>-->
-            <br />
-
-            <button
-              type="submit"
-              :disabled="checks.length < 1"
-              class="
-                border border-white
-                p-4
-                bg-red-500
-                text-white
-                rounded-md
-                px-4
-                py-2
-                m-2
-                transition
-                duration-500
-                ease
-                select-none
-                hover:bg-red-600
-                focus:outline-none focus:shadow-outline
-              "
-              style="position: fixed; bottom: 0; right: 0"
+          <table class="flex flex-col items-center">
+            <tbody class = "w-full">
+            <tr
+              v-for="pollthing in poll.filter(
+                (x) =>
+                  (x.name.toLowerCase().includes(filter.toLowerCase()) ||
+                    x.anime.toLowerCase().includes(filter.toLowerCase())) &&
+                  x.gender.toLowerCase() === 'female' &&
+                  !x.picture.includes('apple') &&
+                  !x.anime.toLowerCase().includes('https')
+              )"
+              :key="pollthing.name.split(', ').join('_')"
+              class="h-48 w-full"
             >
-              Vote
-            </button>
-          </center>
-        </form>
+              <td class="p-2">
+                <label class="supahpoll">
+                  <input
+                    type="checkbox"
+                    :id="pollthing.name.split(', ').join('_')"
+                    class="pollchoice"
+                    name="pollcontent"
+                    @click="(m) => checkClick(pollthing, m)"
+                    :value="pollthing.name.split(', ').join('_')"
+                    :disabled="
+                      checks.length >= 10 &&
+                      !checks.includes(pollthing.name.split(', ').join('_'))
+                    "
+                  /><span class="checkmark"></span>
+                </label>
+              </td>
+              <td class="px-2 py-8 md:px-8">
+                <div
+                  class="
+                    uppercase
+                    tracking-wide
+                    text-xs
+                    md:text-sm
+                    text-red-500
+                    font-semibold
+                  "
+                >
+                  {{ pollthing.anime }}
+                </div>
+                <p
+                  class="
+                    block
+                    mt-1
+                    text-lg
+                    leading-tight
+                    font-medium
+                    text-sm
+                    md:text-base
+                    text-white
+                    hover:bold
+                  "
+                >
+                  {{ pollthing.name }}
+                </p>
+              </td>
+
+              <td>
+                <img
+                  class="h-48 w-full object-cover w-96 md:w-48"
+                  :src="pollthing.picture"
+                  style="min-width: 100px"
+                  :alt="pollthing.name"
+                />
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          <br />
+          <!--                  <div class="g-recaptcha border border-white bg-gray-600 text-white" data-callback = "calvack()"></div>-->
+          <br />
+
+          <button
+            :disabled="checks.length < 1"
+            @click="submit"
+            class="
+              border border-white
+              p-4
+              bg-red-500
+              text-white
+              rounded-md
+              px-4
+              py-2
+              m-2
+              transition
+              duration-500
+              ease
+              select-none
+              hover:bg-red-600
+              focus:outline-none focus:shadow-outline
+            "
+            style="position: fixed; bottom: 0; right: 0"
+          >
+            Vote
+          </button>
+        </div>
         <hr
           style="
             height: 4px;
@@ -193,14 +195,7 @@
     <br /><br /><br />
 
     <div
-      class="
-        mx-auto
-        pamgray2
-        text-white
-        shadow-md
-        overflow-hidden
-        max-w-2xl
-      "
+      class="mx-auto pamgray2 text-white shadow-md overflow-hidden max-w-2xl"
     >
       <hr
         style="
@@ -235,17 +230,18 @@
         />
         <form>
           <center>
-            <table class = "w-full p-4">
-              <tr v-for = "pollthing in checks" :key = "pollthing">
-                <td class = "p-2">
+            <table class="w-full p-4">
+              <tbody class = "w-full">
+              <tr class = "w-full" v-for="pollthing in checks" :key="pollthing.name.split(', ').join('_')">
+                <td class="p-2">
                   <label class="supahpoll">
                     <input
                       type="checkbox"
                       :id="pollthing.name.split(', ').join('_')"
                       class="pollchoice"
                       name="pollcontent"
-                      :value="pollthing"
-                      @click="m => checkClick(pollthing, m)"
+                      :value="pollthing.name.split(', ').join('_')"
+                      @click="(m) => checkClick(pollthing, m)"
                       checked
                     /><span class="checkmark"></span>
                   </label>
@@ -289,6 +285,7 @@
                   />
                 </td>
               </tr>
+              </tbody>
             </table>
           </center>
         </form>
@@ -315,10 +312,26 @@ export default {
     return { poll: polls, filter: '', checks: [] }
   },
   methods: {
-      checkClick(data, target) {
-          if(target.target.checked === true && !this.checks.includes(data)) this.checks.push(data)
-          else this.checks = this.checks.filter(x => x !== data)
+    checkClick(data, target) {
+      console.log(this.checks)
+      if (target.target.checked === true && !this.checks.includes(data))
+        this.checks.push(data)
+      else this.checks = this.checks.filter((x) => x !== data)
+    },
+    async submit() {
+      const result = this.checks.map((x) => x.name.split(', ').join('_'))
+      const res = await this.$axios.$post(
+        'https://beta.presidentanimememes.com/poll/annual',
+        {data: result}
+      )
+      if (res.status !== 200) this.$toast.global.error()
+      else {
+        this.$toast.global.success()
+        setTimeout(() => {
+          this.$router.push('/thankyou')
+        }, 3000)
       }
-  }
+    },
+  },
 }
 </script>
