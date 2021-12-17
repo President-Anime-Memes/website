@@ -319,14 +319,16 @@ export default {
       else this.checks = this.checks.filter((x) => x !== data)
     },
     async submit() {
+      if(localStorage.getItem("votedWaifu")) return this.$toast.global.voted_alr()
       const result = this.checks.map((x) => x.name.split(', ').join('_'))
       const res = await this.$axios.$post(
         'https://beta.presidentanimememes.com/poll/annual',
         {data: result}
       )
-      if (res.status !== 200) this.$toast.global.error()
+      if (res.status !== 200) return this.$toast.global.error()
       else {
         this.$toast.global.success()
+        localStorage.setItem("votedWaifu", "YES")
         setTimeout(() => {
           this.$router.push('/thankyou')
         }, 3000)
