@@ -1,6 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
+    script: [{ src: 'https://arc.io/widget.min.js#pYnxBdHZ' }],
     title: 'President Anime Memes',
     htmlAttrs: {
       lang: 'en',
@@ -8,7 +9,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'An anime community for memes and anime character popularity polls!' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'An anime community for memes and anime character popularity polls!',
+      },
       { name: 'format-detection', content: 'telephone=no' },
       {
         name: 'og:type',
@@ -35,7 +41,6 @@ export default {
         name: 'og:url',
         content: 'https://presidentanimememes.com/',
       },
-      
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -61,19 +66,29 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/toast'
+    '@nuxtjs/toast',
   ],
   toast: {
     position: 'top-center',
-    register: [ // Register custom toasts
+    register: [
+      // Register custom toasts
       {
         name: 'success',
         message: 'Voting success!',
         options: {
           type: 'info',
           duration: 5000,
-          class: "rounded-xl"
-        }
+          class: 'rounded-xl',
+        },
+      },
+      {
+        name: 'voted_alr',
+        message: 'You have already voted!',
+        options: {
+          type: 'error',
+          duration: 5000,
+          class: 'rounded-xl',
+        },
       },
       {
         name: 'error',
@@ -81,10 +96,10 @@ export default {
         options: {
           type: 'error',
           duration: 5000,
-          class: "rounded-xl"
-        }
-      }
-    ]
+          class: 'rounded-xl',
+        },
+      },
+    ],
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
