@@ -1,9 +1,9 @@
     <template>
   <div class="stuff flex flex-col items-center space-y-4">
     <div
-      class="max-w-md mx-auto pamgray2 shadow-md overflow-hidden md:max-w-2xl"
+      class="max-w-md mx-auto pamgray2 shadow-md overflow-hidden w-full md:max-w-2xl"
     >
-      <div class="md:flex">
+      <div class="md:flex w-full">
         <div class="md:flex-shrink-0">
           <img
             class="h-48 w-full object-cover md:w-48"
@@ -193,10 +193,8 @@
       />
     </div>
 
-    <br /><br /><br />
-
     <div
-      class="mx-auto pamgray2 text-white shadow-md overflow-hidden max-w-2xl"
+      class="mx-auto pamgray2 text-white shadow-md overflow-hidden w-full md:max-w-2xl"
     >
       <hr
         style="
