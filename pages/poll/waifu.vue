@@ -1,5 +1,5 @@
     <template>
-  <div class="stuff">
+  <div class="stuff flex flex-col items-center space-y-4">
     <div
       class="max-w-md mx-auto pamgray2 shadow-md overflow-hidden md:max-w-2xl"
     >
@@ -34,6 +34,7 @@
         </div>
       </div>
     </div>
+    <div id="container-bed640522658624db79a5a4634855709"></div>
     <div
       class="
         mx-auto
