@@ -31,7 +31,7 @@
           "
           >There's not much here</a
         >
-        <a href="https://discord.gg/seK6ay2yJj" class="mt-2 text-gray-300"
+        <a href="https://discord.gg/BBQQZuKCQj" class="mt-2 text-gray-300"
           >Why not check out our Sauce Posting Discord server by clicking here meanwhile?<br />
           <img
             src="https://discordapp.com/api/guilds/864469510660816896/embed.png?style=banner2&id={Date.now()}"

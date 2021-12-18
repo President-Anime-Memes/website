@@ -23,7 +23,7 @@
           <div
             class="uppercase tracking-wide text-sm text-red-500 font-semibold"
           >
-            Vote for your favorite Waifu!
+            Vote for your favorite Waifu! {{filter}}
           </div>
           <p
             class="
@@ -94,7 +94,7 @@
                     !x.picture.includes('apple') &&
                     !x.anime.toLowerCase().includes('https')
                 )"
-                :key="pollthing.name.split(', ').join('_')"
+                :key="pollthing.name.split(', ').join('_') + '_' + pollthing.anime.split(' ').join('_')"
                 class="h-48 w-full"
               >
                 <td class="p-2">
@@ -250,7 +250,7 @@
                 <tr
                   class="w-full"
                   v-for="pollthing in checks"
-                  :key="pollthing.name.split(', ').join('_')"
+                :key="pollthing.name.split(', ').join('_') + '_' + pollthing.anime.split(' ').join('_') + '_selected'"
                 >
                   <td class="p-2">
                     <label class="supahpoll">
