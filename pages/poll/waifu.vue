@@ -1,13 +1,21 @@
     <template>
   <div class="stuff flex flex-col items-center space-y-4">
     <div
-      class="max-w-md mx-auto pamgray2 shadow-md overflow-hidden w-full md:max-w-2xl"
+      class="
+        max-w-md
+        mx-auto
+        pamgray2
+        shadow-md
+        overflow-hidden
+        w-full
+        md:max-w-2xl
+      "
     >
       <div class="md:flex w-full">
         <div class="md:flex-shrink-0">
           <img
             class="h-48 w-full object-cover md:w-48"
-            src="https://i.imgur.com/58VS5gY.jpg"
+            src="https://i.imgur.com/iVoZILQh.jpg"
             alt="Weiner"
           />
         </div>
@@ -34,7 +42,7 @@
         </div>
       </div>
     </div>
-<!--    <div id="container-bed640522658624db79a5a4634855709"></div>-->
+    <!--    <div id="container-bed640522658624db79a5a4634855709"></div>-->
     <div
       class="
         mx-auto
@@ -76,74 +84,74 @@
           <input type="hidden" name="pollcontent" value="dummy" />
 
           <table class="flex flex-col items-center">
-            <tbody class = "w-full">
-            <tr
-              v-for="pollthing in poll.filter(
-                (x) =>
-                  (x.name.toLowerCase().includes(filter.toLowerCase()) ||
-                    x.anime.toLowerCase().includes(filter.toLowerCase())) &&
-                  x.gender.toLowerCase() === 'female' &&
-                  !x.picture.includes('apple') &&
-                  !x.anime.toLowerCase().includes('https')
-              )"
-              :key="pollthing.name.split(', ').join('_')"
-              class="h-48 w-full"
-            >
-              <td class="p-2">
-                <label class="supahpoll">
-                  <input
-                    type="checkbox"
-                    :id="pollthing.name.split(', ').join('_')"
-                    class="pollchoice"
-                    name="pollcontent"
-                    @click="(m) => checkClick(pollthing, m)"
-                    :value="pollthing.name.split(', ').join('_')"
-                    :disabled="
-                      checks.length >= 10 &&
-                      !checks.includes(pollthing.name.split(', ').join('_'))
+            <tbody class="w-full">
+              <tr
+                v-for="pollthing in poll.filter(
+                  (x) =>
+                    (x.name.toLowerCase().includes(filter.toLowerCase()) ||
+                      x.anime.toLowerCase().includes(filter.toLowerCase())) &&
+                    x.gender.toLowerCase() === 'female' &&
+                    !x.picture.includes('apple') &&
+                    !x.anime.toLowerCase().includes('https')
+                )"
+                :key="pollthing.name.split(', ').join('_')"
+                class="h-48 w-full"
+              >
+                <td class="p-2">
+                  <label class="supahpoll">
+                    <input
+                      type="checkbox"
+                      :id="pollthing.name.split(', ').join('_')"
+                      class="pollchoice"
+                      name="pollcontent"
+                      @click="(m) => checkClick(pollthing, m)"
+                      :value="pollthing.name.split(', ').join('_')"
+                      :disabled="
+                        checks.length >= 10 &&
+                        !checks.includes(pollthing.name.split(', ').join('_'))
+                      "
+                    /><span class="checkmark"></span>
+                  </label>
+                </td>
+                <td class="px-2 py-8 md:px-8">
+                  <div
+                    class="
+                      uppercase
+                      tracking-wide
+                      text-xs
+                      md:text-sm
+                      text-red-500
+                      font-semibold
                     "
-                  /><span class="checkmark"></span>
-                </label>
-              </td>
-              <td class="px-2 py-8 md:px-8">
-                <div
-                  class="
-                    uppercase
-                    tracking-wide
-                    text-xs
-                    md:text-sm
-                    text-red-500
-                    font-semibold
-                  "
-                >
-                  {{ pollthing.anime }}
-                </div>
-                <p
-                  class="
-                    block
-                    mt-1
-                    text-lg
-                    leading-tight
-                    font-medium
-                    text-sm
-                    md:text-base
-                    text-white
-                    hover:bold
-                  "
-                >
-                  {{ pollthing.name }}
-                </p>
-              </td>
+                  >
+                    {{ pollthing.anime }}
+                  </div>
+                  <p
+                    class="
+                      block
+                      mt-1
+                      text-lg
+                      leading-tight
+                      font-medium
+                      text-sm
+                      md:text-base
+                      text-white
+                      hover:bold
+                    "
+                  >
+                    {{ pollthing.name }}
+                  </p>
+                </td>
 
-              <td>
-                <img
-                  class="h-48 w-full object-cover w-96 md:w-48"
-                  :src="pollthing.picture"
-                  style="min-width: 100px"
-                  :alt="pollthing.name"
-                />
-              </td>
-            </tr>
+                <td>
+                  <img
+                    class="h-48 w-full object-cover w-96 md:w-48"
+                    :src="pollthing.picture"
+                    style="min-width: 100px"
+                    :alt="pollthing.name"
+                  />
+                </td>
+              </tr>
             </tbody>
           </table>
           <br />
@@ -194,7 +202,15 @@
     </div>
 
     <div
-      class="mx-auto pamgray2 text-white shadow-md overflow-hidden w-full md:max-w-2xl"
+      class="
+        mx-auto
+        pamgray2
+        text-white
+        shadow-md
+        overflow-hidden
+        w-full
+        md:max-w-2xl
+      "
     >
       <hr
         style="
@@ -230,60 +246,64 @@
         <form>
           <center>
             <table class="w-full p-4">
-              <tbody class = "w-full">
-              <tr class = "w-full" v-for="pollthing in checks" :key="pollthing.name.split(', ').join('_')">
-                <td class="p-2">
-                  <label class="supahpoll">
-                    <input
-                      type="checkbox"
-                      :id="pollthing.name.split(', ').join('_')"
-                      class="pollchoice"
-                      name="pollcontent"
-                      :value="pollthing.name.split(', ').join('_')"
-                      @click="(m) => checkClick(pollthing, m)"
-                      checked
-                    /><span class="checkmark"></span>
-                  </label>
-                </td>
-                <td class="px-2 py-8">
-                  <div
-                    class="
-                      uppercase
-                      tracking-wide
-                      text-xs
-                      md:text-sm
-                      text-red-500
-                      font-semibold
-                    "
-                  >
-                    {{ pollthing.anime }}
-                  </div>
-                  <p
-                    class="
-                      block
-                      mt-1
-                      text-lg
-                      leading-tight
-                      font-medium
-                      text-sm
-                      md:text-base
-                      text-white
-                      hover:bold
-                    "
-                  >
-                    {{ pollthing.name }}
-                  </p>
-                </td>
+              <tbody class="w-full">
+                <tr
+                  class="w-full"
+                  v-for="pollthing in checks"
+                  :key="pollthing.name.split(', ').join('_')"
+                >
+                  <td class="p-2">
+                    <label class="supahpoll">
+                      <input
+                        type="checkbox"
+                        :id="pollthing.name.split(', ').join('_')"
+                        class="pollchoice"
+                        name="pollcontent"
+                        :value="pollthing.name.split(', ').join('_')"
+                        @click="(m) => checkClick(pollthing, m)"
+                        checked
+                      /><span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td class="px-2 py-8">
+                    <div
+                      class="
+                        uppercase
+                        tracking-wide
+                        text-xs
+                        md:text-sm
+                        text-red-500
+                        font-semibold
+                      "
+                    >
+                      {{ pollthing.anime }}
+                    </div>
+                    <p
+                      class="
+                        block
+                        mt-1
+                        text-lg
+                        leading-tight
+                        font-medium
+                        text-sm
+                        md:text-base
+                        text-white
+                        hover:bold
+                      "
+                    >
+                      {{ pollthing.name }}
+                    </p>
+                  </td>
 
-                <td>
-                  <img
-                    class="h-48 w-full object-cover w-96 md:w-48"
-                    :src="pollthing.picture"
-                    style="min-width: 100px"
-                    :alt="pollthing.name"
-                  />
-                </td>
-              </tr>
+                  <td>
+                    <img
+                      class="h-48 w-full object-cover w-96 md:w-48"
+                      :src="pollthing.picture"
+                      style="min-width: 100px"
+                      :alt="pollthing.name"
+                    />
+                  </td>
+                </tr>
               </tbody>
             </table>
           </center>
@@ -303,6 +323,11 @@
     
 <script>
 export default {
+  head() {
+    return {
+      title: 'Annual Female Character Popularity Poll',
+    }
+  },
   async asyncData() {
     const pollstuff = await fetch(
       'https://beta.presidentanimememes.com/main/characters'
@@ -318,16 +343,17 @@ export default {
       else this.checks = this.checks.filter((x) => x !== data)
     },
     async submit() {
-      if(localStorage.getItem("votedWaifu")) return this.$toast.global.voted_alr()
+      if (localStorage.getItem('votedWaifu'))
+        return this.$toast.global.voted_alr()
       const result = this.checks.map((x) => x.name.split(', ').join('_'))
       const res = await this.$axios.$post(
         'https://beta.presidentanimememes.com/poll/annual',
-        {data: result}
+        { data: result }
       )
       if (res.status !== 200) return this.$toast.global.error()
       else {
         this.$toast.global.success()
-        localStorage.setItem("votedWaifu", "YES")
+        localStorage.setItem('votedWaifu', 'YES')
         setTimeout(() => {
           this.$router.push('/thankyou')
         }, 3000)

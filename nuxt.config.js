@@ -8,6 +8,7 @@ export default {
       { src: 'https://arc.io/widget.min.js#pYnxBdHZ' },
     ],
     title: 'President Anime Memes',
+    titleTemplate: '%s | President Anime Memes',
     htmlAttrs: {
       lang: 'en',
     },
@@ -20,6 +21,9 @@ export default {
         content:
           'An anime community for memes and anime character popularity polls!',
       },
+      {
+        name: 'theme-color', hid: 'theme', content: '#e3242b'
+      },
       { name: 'format-detection', content: 'telephone=no' },
       {
         name: 'og:type',
@@ -27,7 +31,7 @@ export default {
       },
       {
         name: 'og:image',
-        content: 'https://beta.presidentanimememes.com/banner.webp',
+        content: '/banner.webp',
       },
       {
         name: 'og:image_alt',
@@ -35,7 +39,7 @@ export default {
       },
       {
         name: 'og:title',
-        content: 'Home | President Anime Memes',
+        content: 'President Anime Memes',
       },
       {
         name: 'og:description',
@@ -44,6 +48,31 @@ export default {
       },
       {
         name: 'og:url',
+        content: 'https://presidentanimememes.com/',
+      },
+      {
+        name: 'twitter:type',
+        content: 'website',
+      },
+      {
+        name: 'twitter:image',
+        content: '/banner.webp',
+      },
+      {
+        name: 'twitter:image_alt',
+        content: 'President Anime Memes Banner',
+      },
+      {
+        name: 'twitter:title',
+        content: 'President Anime Memes',
+      },
+      {
+        name: 'twitter:description',
+        content:
+          'An anime community for memes and anime character popularity polls!',
+      },
+      {
+        name: 'twitter:url',
         content: 'https://presidentanimememes.com/',
       },
     ],
