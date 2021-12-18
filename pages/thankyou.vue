@@ -41,3 +41,12 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  head() {
+    return {
+      title: "Thank you for voting"
+    }
+  }
+}
+</script>
