@@ -198,13 +198,13 @@ export default {
                       >
                     </div>
                   </NuxtLink>
-                  <a
+                  <div
                     v-else-if="Array.isArray(route)"
                     :href="'#'"
                     :class="
                       (title === key ? 'text-gray-700 ' : 'text-white ') +
                       (Array.isArray(route) ? 'group ' : '') +
-                      'transition duration-500 ease-in-out tracking-wide px-3 flex flex-row space-x-4 md:uppercase py-4 text-xs md:text-md hover:text-gray-800 hover:border-gray-400 border-transparent border-b-2  block'
+                      'cursor-pointer transition duration-500 ease-in-out tracking-wide px-3 flex flex-row space-x-4 md:uppercase py-4 text-xs md:text-md hover:text-gray-800 hover:border-gray-400 border-transparent border-b-2  block'
                     "
                   >
                     <span><SVGWrapper :name="icon" /></span>
@@ -245,7 +245,7 @@ export default {
                         >{{ name2 }}</NuxtLink
                       >
                     </div>
-                  </a>
+                  </div>
                   <a
                     v-else
                     :href="typeof route == 'string' ? route : '#'"

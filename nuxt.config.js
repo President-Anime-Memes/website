@@ -3,7 +3,7 @@ export default {
   head: {
     script: [
 /*      {
-        src: 'https://pl16806903.effectivegatetocontent.com/bed640522658624db79a5a4634855709/invoke.js',
+        src: 'https://www.effectivedisplaycontent.com/6acca8817163baddf5322279ca1ba064/invoke.js',
       },*/
       { src: 'https://arc.io/widget.min.js#pYnxBdHZ' },
     ],
@@ -78,6 +78,7 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
+  ssr: false,
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['./assets/style.css', './assets/responsive.css'],
@@ -91,7 +92,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
+//    '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
   ],
