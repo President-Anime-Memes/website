@@ -29,7 +29,7 @@ export default [
     icon: `participant`,
   },
   {
-    name: `Sauce Posting`,
+    name: `Sauce`,
     route: `/sauce`,
     key: `sauce`,
     icon: `file`,

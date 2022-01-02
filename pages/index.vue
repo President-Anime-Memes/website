@@ -120,6 +120,43 @@
           </div>
         </div>
       </div>
+            <div class="          transform
+          transition
+          duration-500
+          ease-in-out
+          md:hover:scale-110 border-red-500 border-2            bg-grayshit-500 bg-opacity-90
+">
+        <div class="">
+          <img
+            class="p-4 w-full object-cover"
+            src="/saucebanner.png"
+            alt="Weiner"
+          />
+        </div>
+        <div class="flex flex-col items-center p-8">
+          <a
+            href="https://discord.gg/BBQQZuKCQj"
+            class="
+              block
+              mt-1
+              text-lg
+              leading-tight
+              font-medium
+              text-white
+              hover:underline
+            "
+            >Psst hey!</a
+          >
+          <a href="https://discord.gg/BBQQZuKCQj" class="mt-2 text-gray-300"
+            >Why not check out our Sauce Posting Discord server by clicking here
+            meanwhile?<br />
+            <img
+              class="mx-auto"
+              src="https://discordapp.com/api/guilds/864469510660816896/embed.png?style=banner2&id={Date.now()}"
+              alt="Discord"
+          /></a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
