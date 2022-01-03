@@ -1,5 +1,7 @@
 <template>
 <div>
+  <div class = "p-4 flex-col items-center md:flex" id = "popunder" />
+
   <div class = "p-4 flex-col items-center hidden md:flex" id = "dada" />
     <div class = "p-4 flex flex-col items-center md:hidden" id = "dadam" />
 
@@ -37,6 +39,7 @@ export default {
 
   },
   mounted() {
+    postscribe("#popunder", `<script type='text/javascript' src='//groundlesscobwebmiller.com/b5/40/dc/b540dcc9fcf576301ad486a48ddbd854.js'></script>`)
     postscribe("#dada", `<script type="text/javascript">
     atOptions = {
         'key' : '72e8d0ce607c81cd361ad4c026c94a15',
