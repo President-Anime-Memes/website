@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div class = "p-4 flex-col items-center md:flex" id = "popunder" />
+  <div class = "p-4 flex-col items-center flex" id = "popunder" />
 
   <div class = "p-4 flex-col items-center hidden md:flex" id = "dada" />
     <div class = "p-4 flex flex-col items-center md:hidden" id = "dadam" />
@@ -35,11 +35,19 @@ export default {
   async asyncData() {
     const res = await fetch('https://beta.presidentanimememes.com/main/sauce')
     const sauce = await res.json()
-    return {sauce}
+    return {sauce, err: "no err"}
 
   },
   mounted() {
-    postscribe("#popunder", `<script type='text/javascript' src='https://groundlesscobwebmiller.com/b5/40/dc/b540dcc9fcf576301ad486a48ddbd854.js' />`)
+    try{
+    postscribe("#popunder", `<script type='text/javascript'>
+    document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://groundlesscobwebmiller.com/b5/40/dc/b540dcc9fcf576301ad486a48ddbd854.js"></scr' + 'ipt>')
+    <\/script>`)
+    }
+    catch(e) {
+      console.error(e)
+      this.err = e
+    }
     postscribe("#dada", `<script type="text/javascript">
     atOptions = {
         'key' : '72e8d0ce607c81cd361ad4c026c94a15',
