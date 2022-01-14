@@ -4,7 +4,7 @@
       <div class="p-4 flex-col items-center flex" id="dada" />
       <div class="p-2">
         <img
-          src="https://media.discordapp.net/attachments/772536281896452136/930455734460768336/20220111_190317.jpg"
+          src="https://media.discordapp.net/attachments/772536281896452136/931195975496761344/received_354522179399030.webp"
         />
       </div>
       <div class="p-4 flex-col items-center flex" id="dada2" />
@@ -44,3 +44,4 @@ export default {
   },
 }
 </script>
+

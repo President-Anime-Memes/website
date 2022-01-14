@@ -1,33 +1,35 @@
 <template>
-<div>
-  <div class = "p-4 flex-col items-center flex" id = "popunder" />
+  <div>
+    <div class="p-4 flex-col items-center flex" id="popunder" />
 
-  <div class = "p-4 flex-col items-center hidden md:flex" id = "dada" />
-    <div class = "p-4 flex flex-col items-center md:hidden" id = "dadam" />
+    <div class="p-4 flex-col items-center hidden md:flex" id="dada" />
+    <div class="p-4 flex flex-col items-center md:hidden" id="dadam" />
 
-  <div
-    class="
-      max-w-md
-      mx-auto
-      bg-grayshit-500 bg-opacity-90
-      shadow-md
-      overflow-hidden
-      md:max-w-2xl
-    "
-  >
-  <div class = "p-4 border-red-500 border-2 flex flex-col items-center">
-    <p class = "font-semibold p-2 text-lg">{{sauce.caption}}</p>
-        <p class = "font-semibold p-2 text-md">Scroll down for link</p>
-    <img class = "object-cover w-full p-2" :src = "sauce.image"/>
-    <p class = "font-semibold p-2 text-lg">{{sauce.link}}</p>
-
+    <div
+      class="
+        max-w-md
+        mx-auto
+        bg-grayshit-500 bg-opacity-90
+        shadow-md
+        overflow-hidden
+        md:max-w-2xl
+      "
+    >
+      <div class="p-4 border-red-500 border-2 flex flex-col items-center">
+        <p class="font-semibold p-2 text-lg">{{ sauce.caption }}</p>
+        <p class="font-semibold p-2 text-md">Scroll down for link</p>
+        <img class="object-cover w-full p-2" :src="sauce.image" />
+        <p class="font-semibold p-2 text-lg">{{ sauce.link }}</p>
+      </div>
+    </div>
+    <div class="p-4 flex-col items-center hidden md:flex" id="dada1" />
+    <div class="p-4 flex flex-col items-center md:hidden" id="dadam1" />
+    <script
+      type="text/javascript"
+      src="//groundlesscobwebmiller.com/19/6d/d7/196dd78d9df5d71835930bc7e9accb58.js"
+    ></script>
+    <div id="container-bed640522658624db79a5a4634855709"></div>
   </div>
-    
-  </div>
-  <div class = "p-4 flex-col items-center hidden md:flex" id = "dada1" />
-  <div class = "p-4 flex flex-col items-center md:hidden" id = "dadam1" />
-
-</div>
 </template>
 <script>
 import postscribe from 'postscribe'
@@ -35,20 +37,23 @@ export default {
   async asyncData() {
     const res = await fetch('https://beta.presidentanimememes.com/main/sauce')
     const sauce = await res.json()
-    return {sauce, err: "no err"}
-
+    return { sauce, err: 'no err' }
   },
   mounted() {
-    try{
-    postscribe("#popunder", `<script type='text/javascript'>
+    try {
+      postscribe(
+        '#popunder',
+        `<script type='text/javascript'>
     document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://groundlesscobwebmiller.com/b5/40/dc/b540dcc9fcf576301ad486a48ddbd854.js"></scr' + 'ipt>')
-    <\/script>`)
-    }
-    catch(e) {
+    <\/script>`
+      )
+    } catch (e) {
       console.error(e)
       this.err = e
     }
-    postscribe("#dada", `<script type="text/javascript">
+    postscribe(
+      '#dada',
+      `<script type="text/javascript">
     atOptions = {
         'key' : '72e8d0ce607c81cd361ad4c026c94a15',
         'format' : 'iframe',
@@ -57,8 +62,11 @@ export default {
         'params' : {}
     };
     document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://groundlesscobwebmiller.com/72e8d0ce607c81cd361ad4c026c94a15/invoke.js"></scr' + 'ipt>');
-<\/script>`)
-    postscribe("#dadam", `<script type="text/javascript">
+<\/script>`
+    )
+    postscribe(
+      '#dadam',
+      `<script type="text/javascript">
     atOptions = {
         'key' : '72e8d0ce607c81cd361ad4c026c94a15',
         'format' : 'iframe',
@@ -67,9 +75,12 @@ export default {
         'params' : {}
     };
     document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://groundlesscobwebmiller.com/72e8d0ce607c81cd361ad4c026c94a15/invoke.js"></scr' + 'ipt>');
-<\/script>`)
+<\/script>`
+    )
 
-    postscribe("#dada1", `<script type="text/javascript">
+    postscribe(
+      '#dada1',
+      `<script type="text/javascript">
     atOptions = {
         'key' : '5f563d114936af66fee3132cb94027f4',
         'format' : 'iframe',
@@ -78,8 +89,11 @@ export default {
         'params' : {}
     };
     document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://groundlesscobwebmiller.com/5f563d114936af66fee3132cb94027f4/invoke.js"></scr' + 'ipt>');
-<\/script>`)
-    postscribe("#dadam1", `<script type="text/javascript">
+<\/script>`
+    )
+    postscribe(
+      '#dadam1',
+      `<script type="text/javascript">
     atOptions = {
         'key' : '5f563d114936af66fee3132cb94027f4',
         'format' : 'iframe',
@@ -88,7 +102,8 @@ export default {
         'params' : {}
     };
     document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://groundlesscobwebmiller.com/5f563d114936af66fee3132cb94027f4/invoke.js"></scr' + 'ipt>');
-<\/script>`)
-  }
+<\/script>`
+    )
+  },
 }
 </script>
