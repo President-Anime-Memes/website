@@ -2,9 +2,9 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     script: [
-      {
-        src: 'https://groundlesscobwebmiller.com/bed640522658624db79a5a4634855709/invoke.js',
-      },
+//      {
+//        src: 'https://groundlesscobwebmiller.com/bed640522658624db79a5a4634855709/invoke.js',
+//      },
       { src: 'https://arc.io/widget.min.js#pYnxBdHZ' },
     ],
     title: 'President Anime Memes',
