@@ -5,6 +5,7 @@
     <div class="p-4 flex-col items-center hidden md:flex" id="dada" />
     <div class="p-4 flex flex-col items-center md:hidden" id="dadam" />
 
+<div class = "p-4" id = "newm" />
     <div
       class="
         max-w-md
@@ -19,7 +20,7 @@
         <p class="font-semibold p-2 text-lg">{{ sauce.caption }}</p>
         <p class="font-semibold p-2 text-md">Scroll down for link</p>
         <img class="object-cover w-full p-2" :src="sauce.image" />
-        <p class="font-semibold p-2 text-lg">{{ sauce.link }}</p>
+        <p class="font-semibold p-2 text-lg">Link: <a :href = "sauce.link">{{ sauce.link }}</a></p>
       </div>
     </div>
     <div class="p-4 flex-col items-center hidden md:flex" id="dada1" />
@@ -52,6 +53,7 @@ export default {
       console.error(e)
       this.err = e
     }
+    postscribe(`#newm`, `<script data-cfasync="false" src="//d2kd9y1bp4zc6.cloudfront.net/?bydkd=947482"></script>`)
     postscribe(
       '#dada',
       `<script type="text/javascript">
