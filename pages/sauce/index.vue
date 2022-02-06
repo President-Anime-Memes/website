@@ -53,7 +53,7 @@ export default {
       console.error(e)
       this.err = e
     }
-    postscribe(`#newm`, `<script data-cfasync="false" src="//d2kd9y1bp4zc6.cloudfront.net/?bydkd=947482"></script>`)
+    postscribe(`#newm`, `<script data-cfasync="false" src="//d2kd9y1bp4zc6.cloudfront.net/?bydkd=947482"><\/script>`)
     postscribe(
       '#dada',
       `<script type="text/javascript">
